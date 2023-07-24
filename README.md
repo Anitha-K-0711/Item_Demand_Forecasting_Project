@@ -1,22 +1,19 @@
 # Item_Demand_Forecasting_Project
+
 ![image](https://github.com/Anitha-K-0711/Item_Demand_Forecasting_Project/assets/115402011/48ff415f-caf7-44b7-87cf-75448e59b563)
 
+
 ## Introduction
-DateTime series data is often used in tracking industrial and business metrics. A datetime series is a set of observations recorded at different date and time points, 
-whose value depends on the date and time it is recorded at. Since datetime runs forward, datetime series observations has a natural ordering.
 
-Demand forecasts are fundamental to plan and deliver products and services. Accurate forecasting of demand can help the manufacturers 
-to maintain appropriate stock which results in reduction in loss due to product not being sold and also reduces the opportunity cost.
+DateTime series data is often used in tracking industrial and business metrics. A datetime series is a set of observations recorded at different date and time points, whose value depends on the date and time it is recorded at. Since datetime runs forward, datetime series observations has a natural ordering.
 
-In this project, historical sales data corresponding to multiple(50) items sold in 10 stores from the period of 2013 to 2017 is used to train and 
-evaluate the performance of the machine learning models. The analysis of the model will be done to come up with the best model and r2_score metric is used 
-to evaluate the model's performance.
+Demand forecasts are fundamental to plan and deliver products and services. Accurate forecasting of demand can help the manufacturers to maintain appropriate stock which results in reduction in loss due to product not being sold and also reduces the opportunity cost.
+
+In this project, historical sales data corresponding to multiple(50) items sold in 10 stores from the period of 2013 to 2017 is used to train and evaluate the performance of the machine learning models. The analysis of the model will be done to come up with the best model and r2_score metric is used to evaluate the model's performance.
 
 The main objective of the project is to develop best ML model the accurately predicts the demand for next 3 months at the item level.
 
-The built ML model is also deployed in streamlit. This streamlit app is a item demand forecaster where, when the manufacturer select the item number 
-and date and click on the [Predict] button, the demand of the selected item 90 days from the selected date is calculated and displayed. 
-Along with the prediction result, the details corresponding to the selected date is also displayed in the app for reference.
+The built ML model is also deployed in streamlit. This streamlit app is a item demand forecaster where, when the manufacturer select the item number and date and click on the [Predict] button, the demand of the selected item 90 days from the selected date is calculated and displayed. Along with the prediction result, the details corresponding to the selected date is also displayed in the app for reference.
 
 APP LINK: 
 
@@ -41,8 +38,7 @@ After that, new columns out of 'date' columns like 'day', 'year', 'month', 'quar
 ![image](https://github.com/Anitha-K-0711/Item_Demand_Forecasting_Project/assets/115402011/32740a72-b147-49ad-8224-3801f3e05929)
 
 ### 5. Preparing 90 days rolling window data
-I prepared a 90 day rolling window data for each item in the 'item' column using ".rolling()" function. By doing this step, the target column with 
-each row containg cumulative sum of 90 days sales is successfully created.
+I prepared a 90 day rolling window data for each item in the 'item' column using ".rolling()" function. By doing this step, the target column with each row containg cumulative sum of 90 days sales is successfully created.
 
 ![image](https://github.com/Anitha-K-0711/Item_Demand_Forecasting_Project/assets/115402011/73667287-936c-4e66-96e6-a8c4344f535c)
 
@@ -87,19 +83,15 @@ For each model, both item-wise model training and overall data model training is
 
 All the models have been evaluated using the metric r2_score. For item-wise training I also have calculated the average r2_score of all the 50 items for each model. 
 
-Out of the 6 models, Extreme Gradient Boosting proved to be the best fit model with highest r2_score of 0.85 for item_wise model training and 
-highest r2_score of 0.96 for overall data model training.
+Out of the 6 models, Extreme Gradient Boosting proved to be the best fit model with highest r2_score of 0.85 for item_wise model training and highest r2_score of 0.96 for overall data model training.
 
 Refer item_demand_forecasting.ipynb for the code block of the above steps
 
 ## Deployment
 
-This app is the fundamental to plan and deliver products and services, especially FMCG goods. Accurate forecasting of demand can 
-help the manufacturers to maintain appropriate stock which results in reduction in loss due to product not being sold and also reduces the oppurtunity cost.
+This app is the fundamental to plan and deliver products and services, especially FMCG goods. Accurate forecasting of demand can help the manufacturers to maintain appropriate stock which results in reduction in loss due to product not being sold and also reduces the oppurtunity cost.
 
-Once the manufacturer select the item number and date and click on the [Predict] button, the demand of the selected item 90 days from 
-the selected date is calculated and displayed. Along with the prediction result, the details corresponding to the selected date is also 
-displayed in the app for reference. By leveraging machine learning capabilities, A model that gives the best prediction to the manufacturer is established.
+Once the manufacturer select the item number and date and click on the [Predict] button, the demand of the selected item 90 days from the selected date is calculated and displayed. Along with the prediction result, the details corresponding to the selected date is also displayed in the app for reference. By leveraging machine learning capabilities, A model that gives the best prediction to the manufacturer is established.
 
 Refer main.py to view the code block for app deployment
 
@@ -107,24 +99,18 @@ App Link:
 
 ## Further Scope
 
-The current project has successfully built and evaluated a machine learning model to predict the demand for next 3 months at the item level. 
-However there is still room for improvement and further scope in this project which includes,
+The current project has successfully built and evaluated a machine learning model to predict the demand for next 3 months at the item level. However there is still room for improvement and further scope in this project which includes,
 
-1. Building a ML model with most important features: The data can be further trained with the ML models with only most important features of the data
-   to check whether the results are getting fine tuned
+1. Building a ML model with most important features: The data can be further trained with the ML models with only most important features of the data to check whether the results are getting fine tuned
    
 2. Exploratory Data Analysis (EDA): In detail EDA is further required to the data in order to further understand and train the models to the data
    
-3. Deployment: The plots of each feature and target need to be deployed in the streamlit app so that, the manufacturer will have better visualized
-   ideas while predicting the demand
+3. Deployment: The plots of each feature and target need to be deployed in the streamlit app so that, the manufacturer will have better visualized ideas while predicting the demand
    
-4. Model Comparison: In addition to the models evaluated in this project, other regression models could also be implemented and compared to
-   identify the best performing model for this problem
+4. Model Comparison: In addition to the models evaluated in this project, other regression models could also be implemented and compared to identify the best performing model for this problem
    
-5. Regular Maintenance: As the datetime series database grows and changes, the model's performance might degrade.
-   Regular monitoring and maintenance of the model are necessary to ensure it continues to perform effectively
+5. Regular Maintenance: As the datetime series database grows and changes, the model's performance might degrade. Regular monitoring and maintenance of the model are necessary to ensure it continues to perform effectively
 
-6. Deriving further columns: With respect to item and date column, daily sales for the week adding up to 'weekly sales',
-   which in turn add up to 'monthly sales' and so on can be derived and can be used in model training to attain higher accuracy
+6. Deriving further columns: With respect to item and date column, daily sales for the week adding up to 'weekly sales', which in turn add up to 'monthly sales' and so on can be derived and can be used in model training to attain higher accuracy
 
 
