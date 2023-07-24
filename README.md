@@ -15,7 +15,7 @@ The main objective of the project is to develop best ML model the accurately pre
 
 The built ML model is also deployed in streamlit. This streamlit app is a item demand forecaster where, when the manufacturer select the item number and date and click on the [Predict] button, the demand of the selected item 90 days from the selected date is calculated and displayed. Along with the prediction result, the details corresponding to the selected date is also displayed in the app for reference.
 
-APP LINK: 
+APP LINK: https://itemdemandforecastingproject-553i0ha3szo.streamlit.app/
 
 ## Project Approach
 
@@ -95,7 +95,7 @@ Once the manufacturer select the item number and date and click on the [Predict]
 
 Refer main.py to view the code block for app deployment
 
-App Link: 
+App Link: https://itemdemandforecastingproject-553i0ha3szo.streamlit.app/
 
 ## Further Scope
 
