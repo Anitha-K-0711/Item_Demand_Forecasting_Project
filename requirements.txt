@@ -1,5 +1,4 @@
 pip==22.3.1
-importlib-metadata==6.8.0
 cachetools==5.3.1
 DateTime==5.2
 gitdb==4.0.10
